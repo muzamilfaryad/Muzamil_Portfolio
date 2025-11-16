@@ -31,8 +31,8 @@ export default function TrustIndicators() {
   const indicators = [
     {
       icon: FaBriefcase,
-      value: 10,
-      suffix: '+',
+      value: 6,
+      suffix: ' month+',
       label: 'Years Experience',
       color: 'from-blue-500 to-cyan-500',
       description: 'an excellence in MERN stack'

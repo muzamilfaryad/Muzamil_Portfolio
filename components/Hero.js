@@ -310,13 +310,15 @@ export default function Hero() {
                 className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-secondary opacity-20 blur-3xl"
               />
               <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden gradient-border pulse-glow">
-                <div className="absolute inset-2 rounded-full overflow-hidden">
+                <div className="absolute inset-2 rounded-full overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20">
                   <Image
                     src="/opentowork.png"
                     alt="Muhammad Muzamil Faryad"
                     fill
+                    sizes="(max-width: 768px) 256px, (max-width: 1024px) 320px, 384px"
                     style={{ objectFit: 'cover' }}
                     priority
+                    unoptimized
                   />
                 </div>
                 <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary/20 via-transparent to-secondary/20 pointer-events-none"></div>

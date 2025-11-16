@@ -86,13 +86,15 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <a href="#home" className="flex items-center gap-3 hover:scale-105 transition-transform group">
-              <div className="relative w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full overflow-hidden border-2 border-primary/50 group-hover:border-primary transition-colors">
+              <div className="relative w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full overflow-hidden border-2 border-primary/50 group-hover:border-primary transition-colors bg-gradient-to-br from-primary/20 to-secondary/20">
                 <Image
                   src="/logo.png"
                   alt="MMF Logo"
                   fill
+                  sizes="48px"
                   style={{ objectFit: 'cover' }}
                   priority
+                  unoptimized
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-secondary/20"></div>
               </div>
