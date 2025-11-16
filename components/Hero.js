@@ -246,7 +246,7 @@ export default function Hero() {
                 className="btn-pro btn-pro-primary"
               >
                 <span className="flex items-center gap-2">
-                  <span>{t('hero.hireMe')}</span>
+                  <span>{t('Let\'s Talk')}</span>
                   <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </span>
               </a>
