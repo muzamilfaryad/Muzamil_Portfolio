@@ -35,7 +35,7 @@ export default function TrustIndicators() {
       suffix: '+',
       label: 'Years Experience',
       color: 'from-blue-500 to-cyan-500',
-      description: 'Decade of excellence in MERN stack'
+      description: 'an excellence in MERN stack'
     },
     {
       icon: FaProjectDiagram,

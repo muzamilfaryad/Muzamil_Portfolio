@@ -17,7 +17,7 @@ export const translations = {
       greeting: "Hello, I'm",
       name: 'Muhammad Muzamil Faryad',
       title: 'MERN Stack Developer',
-      description: 'With 10 years of experience crafting robust and scalable web applications. Specialized in MongoDB, Express.js, React.js (Next.js), and Node.js.',
+      description: 'With 6 months+ of experience crafting robust and scalable web applications. Specialized in MongoDB, Express.js, React.js (Next.js), and Node.js.',
       hireMe: 'Hire Me',
       downloadCV: 'Download CV'
     },
