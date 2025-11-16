@@ -85,7 +85,7 @@ export default function Projects() {
   });
 
   return (
-    <section id="projects" className="py-20 px-4">
+    <section id="projects" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -94,10 +94,10 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 section-header mx-auto" style={{ fontFamily: 'Poppins, sans-serif' }}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 section-header mx-auto" style={{ fontFamily: 'Poppins, sans-serif' }}>
             Featured <span className="gradient-text-pro">Projects</span>
           </h2>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto" style={{ fontFamily: 'Inter, sans-serif' }}>
+          <p className="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto" style={{ fontFamily: 'Inter, sans-serif' }}>
             Showcasing excellence in full-stack development with enterprise-grade solutions
           </p>
         </motion.div>
@@ -123,7 +123,7 @@ export default function Projects() {
           </div>
 
           {/* Filter Buttons */}
-          <div className="flex flex-wrap gap-4 items-center">
+          <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 items-center">
             <div className="flex items-center gap-2 text-gray-300" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600 }}>
               <FaFilter />
               <span>Filter by:</span>
@@ -133,7 +133,7 @@ export default function Projects() {
             <select
               value={selectedTech}
               onChange={(e) => setSelectedTech(e.target.value)}
-              className="glass-pro px-5 py-3 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-primary/50 cursor-pointer border border-white/10 hover:border-primary/30 transition-all"
+              className="glass-pro px-3 sm:px-4 md:px-5 py-2 sm:py-2.5 md:py-3 rounded-lg sm:rounded-xl text-sm sm:text-base text-white focus:outline-none focus:ring-2 focus:ring-primary/50 cursor-pointer border border-white/10 hover:border-primary/30 transition-all"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
               {allTechs.map(tech => (
@@ -145,7 +145,7 @@ export default function Projects() {
             <select
               value={selectedIndustry}
               onChange={(e) => setSelectedIndustry(e.target.value)}
-              className="glass-pro px-5 py-3 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-primary/50 cursor-pointer border border-white/10 hover:border-primary/30 transition-all"
+              className="glass-pro px-3 sm:px-4 md:px-5 py-2 sm:py-2.5 md:py-3 rounded-lg sm:rounded-xl text-sm sm:text-base text-white focus:outline-none focus:ring-2 focus:ring-primary/50 cursor-pointer border border-white/10 hover:border-primary/30 transition-all"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
               {allIndustries.map(industry => (
@@ -157,7 +157,7 @@ export default function Projects() {
             <select
               value={selectedYear}
               onChange={(e) => setSelectedYear(e.target.value)}
-              className="glass-pro px-5 py-3 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-primary/50 cursor-pointer border border-white/10 hover:border-primary/30 transition-all"
+              className="glass-pro px-3 sm:px-4 md:px-5 py-2 sm:py-2.5 md:py-3 rounded-lg sm:rounded-xl text-sm sm:text-base text-white focus:outline-none focus:ring-2 focus:ring-primary/50 cursor-pointer border border-white/10 hover:border-primary/30 transition-all"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
               {allYears.map(year => (
@@ -166,13 +166,13 @@ export default function Projects() {
             </select>
 
             {/* Results count */}
-            <span className="ml-auto text-gray-300" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 500 }}>
+            <span className="w-full sm:w-auto sm:ml-auto text-gray-300 text-sm sm:text-base mt-2 sm:mt-0" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 500 }}>
               Showing <span className="gradient-text-pro font-bold">{filteredProjects.length}</span> of {projects.length} projects
             </span>
           </div>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {filteredProjects.map((project, index) => (
             <motion.div
               key={index}
@@ -180,10 +180,10 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="pro-card group relative"
+              className="pro-card group relative overflow-hidden"
             >
               {/* Project Image */}
-              <div className="relative h-52 bg-gradient-to-br from-primary/20 to-secondary/20 overflow-hidden">
+              <div className="relative h-40 sm:h-48 md:h-52 bg-gradient-to-br from-primary/20 to-secondary/20 overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center text-7xl font-bold text-white/5" style={{ fontFamily: 'Poppins, sans-serif' }}>
                   {index + 1}
                 </div>
@@ -196,8 +196,8 @@ export default function Projects() {
               </div>
 
               {/* Project Content */}
-              <div className="p-6 relative">
-                <h3 className="text-xl font-bold mb-3 group-hover:gradient-text-pro transition-all duration-300" style={{ fontFamily: 'Poppins, sans-serif' }}>
+              <div className="p-4 sm:p-5 md:p-6 relative">
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 group-hover:gradient-text-pro transition-all duration-300" style={{ fontFamily: 'Poppins, sans-serif' }}>
                   {project.title}
                 </h3>
                 <p className="text-gray-300 text-sm mb-4 line-clamp-3 leading-relaxed" style={{ fontFamily: 'Inter, sans-serif' }}>

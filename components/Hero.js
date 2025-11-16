@@ -18,7 +18,7 @@ export default function Hero() {
   const { width, height } = getWindowDimensions();
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center pt-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center pt-16 sm:pt-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Large Animated Gradient Orbs */}
@@ -182,13 +182,13 @@ export default function Hero() {
       </div>
 
       <div className="max-w-7xl mx-auto w-full relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-left"
+            className="text-left px-2"
           >
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -205,7 +205,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 leading-tight"
               style={{ fontFamily: 'Poppins, sans-serif' }}
             >
               {t('hero.name').split(' ').slice(0, 2).join(' ')}
@@ -217,7 +217,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-2xl md:text-3xl mb-6"
+              className="text-xl sm:text-2xl md:text-3xl mb-4 md:mb-6"
               style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600 }}
             >
               <span className="gradient-text-pro">
@@ -229,7 +229,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="text-gray-300 text-lg mb-8 max-w-xl leading-relaxed"
+              className="text-gray-300 text-base sm:text-lg mb-6 md:mb-8 max-w-xl leading-relaxed"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
               {t('hero.description')}
@@ -239,7 +239,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="flex flex-wrap gap-4 mb-8"
+              className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 mb-6 md:mb-8"
             >
               <a
                 href="#contact"
@@ -264,7 +264,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
-              className="flex gap-4"
+              className="flex gap-3 sm:gap-4 justify-center sm:justify-start"
             >
               <a
                 href={whatsappLink}
@@ -301,7 +301,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="flex justify-center"
+            className="flex justify-center mt-8 md:mt-0"
           >
             <div className="relative">
               <motion.div
@@ -309,7 +309,7 @@ export default function Hero() {
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                 className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-secondary opacity-20 blur-3xl"
               />
-              <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden gradient-border pulse-glow">
+              <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden gradient-border pulse-glow">
                 <div className="absolute inset-2 rounded-full overflow-hidden">
                   <Image
                     src="/opentowork.png"

@@ -10,7 +10,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-20 px-4">
+    <section id="about" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -19,23 +19,23 @@ export default function About() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 section-header mx-auto" style={{ fontFamily: 'Poppins, sans-serif' }}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 section-header mx-auto" style={{ fontFamily: 'Poppins, sans-serif' }}>
             About <span className="gradient-text-pro">Me</span>
           </h2>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto" style={{ fontFamily: 'Inter, sans-serif' }}>
+          <p className="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto" style={{ fontFamily: 'Inter, sans-serif' }}>
             Passionate developer turning ideas into reality through clean code and innovative solutions
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8 lg:gap-10 mb-12 md:mb-16">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="pro-card p-8"
+            className="pro-card p-5 sm:p-6 md:p-8"
           >
-            <h3 className="text-2xl font-bold mb-6 gradient-text-pro" style={{ fontFamily: 'Poppins, sans-serif' }}>My Journey</h3>
+            <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 gradient-text-pro" style={{ fontFamily: 'Poppins, sans-serif' }}>My Journey</h3>
             <p className="text-gray-300 leading-relaxed mb-4" style={{ fontFamily: 'Inter, sans-serif' }}>
               With a decade of experience in full-stack development, I've mastered the art of 
               building scalable, high-performance web applications using the MERN stack. My expertise 
@@ -54,9 +54,9 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="pro-card p-8"
+            className="pro-card p-5 sm:p-6 md:p-8"
           >
-            <h3 className="text-2xl font-bold mb-6 gradient-text-pro" style={{ fontFamily: 'Poppins, sans-serif' }}>What I Do</h3>
+            <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 gradient-text-pro" style={{ fontFamily: 'Poppins, sans-serif' }}>What I Do</h3>
             <ul className="space-y-4" style={{ fontFamily: 'Inter, sans-serif' }}>
               <li className="flex items-start gap-3 group">
                 <span className="text-primary text-xl group-hover:scale-125 transition-transform">✓</span>
@@ -92,7 +92,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6"
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5 md:gap-6"
         >
           {stats.map((stat, index) => (
             <motion.div

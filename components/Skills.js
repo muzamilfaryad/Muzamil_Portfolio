@@ -60,7 +60,7 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-20 px-4">
+    <section id="skills" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -69,15 +69,15 @@ export default function Skills() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 section-header mx-auto" style={{ fontFamily: 'Poppins, sans-serif' }}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 section-header mx-auto" style={{ fontFamily: 'Poppins, sans-serif' }}>
             My <span className="gradient-text-pro">Skills</span>
           </h2>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto" style={{ fontFamily: 'Inter, sans-serif' }}>
+          <p className="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto" style={{ fontFamily: 'Inter, sans-serif' }}>
             Technologies and tools I use to bring ideas to life
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 md:gap-8">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={categoryIndex}
@@ -85,9 +85,9 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: categoryIndex * 0.1 }}
-              className="pro-card p-6"
+              className="pro-card p-4 sm:p-5 md:p-6"
             >
-              <h3 className="text-xl font-bold mb-6 gradient-text-pro flex items-center gap-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
+              <h3 className="text-lg sm:text-xl font-bold mb-4 sm:mb-5 md:mb-6 gradient-text-pro flex items-center gap-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
                 <span className="text-2xl">⚡</span>
                 {category.title}
               </h3>
@@ -124,8 +124,8 @@ export default function Skills() {
           transition={{ delay: 0.4 }}
           className="mt-16 pro-card p-8"
         >
-          <h3 className="text-2xl font-bold mb-8 text-center gradient-text-pro" style={{ fontFamily: 'Poppins, sans-serif' }}>Core Expertise</h3>
-          <div className="grid md:grid-cols-2 gap-6">
+          <h3 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-center gradient-text-pro" style={{ fontFamily: 'Poppins, sans-serif' }}>Core Expertise</h3>
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
             {[
               { name: 'Full-Stack Development', level: 98 },
               { name: 'MERN Stack', level: 95 },

@@ -4,20 +4,20 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="glass py-8 px-4 border-t border-primary/20">
+    <footer className="glass py-6 sm:py-8 px-4 border-t border-primary/20">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-gray-400 text-sm">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4 text-center md:text-left">
+          <div className="text-gray-400 text-xs sm:text-sm">
             © {currentYear} Muhammad Muzamil Faryad. All rights reserved.
           </div>
           
-          <div className="flex items-center gap-2 text-gray-400 text-sm">
+          <div className="flex items-center gap-2 text-gray-400 text-xs sm:text-sm">
             <span>Made with</span>
             <FaHeart className="text-red-500 animate-pulse" />
             <span>using Next.js</span>
           </div>
 
-          <div className="text-gray-400 text-sm">
+          <div className="text-gray-400 text-xs sm:text-sm">
             MERN Stack Developer
           </div>
         </div>

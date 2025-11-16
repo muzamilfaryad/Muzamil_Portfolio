@@ -550,7 +550,18 @@ h1, h2, h3, h4, h5, h6 {
   margin: 80px 0;
 }
 
-/* Responsive Typography */
+/* Enhanced Responsive Typography */
+@media (max-width: 1024px) {
+  .pro-card {
+    padding: 1.5rem;
+  }
+  
+  .btn-pro {
+    padding: 12px 28px;
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 768px) {
   html {
     font-size: 14px;
@@ -562,6 +573,7 @@ h1, h2, h3, h4, h5, h6 {
   
   .pro-card {
     padding: 1.25rem;
+    border-radius: 16px;
   }
   
   .stat-card {
@@ -581,30 +593,161 @@ h1, h2, h3, h4, h5, h6 {
     padding: 6px 16px;
     font-size: 12px;
   }
+  
+  .glass-pro {
+    border-radius: 12px;
+  }
+  
+  /* Better mobile spacing */
+  section {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
 }
 
 @media (max-width: 640px) {
+  html {
+    font-size: 13px;
+  }
+  
   .stat-number {
     font-size: 2rem;
   }
   
   h1 {
-    font-size: 2rem !important;
+    font-size: 1.875rem !important;
+    line-height: 1.2 !important;
   }
   
   h2 {
-    font-size: 1.75rem !important;
+    font-size: 1.5rem !important;
   }
   
   h3 {
     font-size: 1.25rem !important;
   }
+  
+  .pro-card {
+    padding: 1rem;
+    border-radius: 12px;
+  }
+  
+  .stat-card {
+    padding: 1rem;
+  }
+  
+  .btn-pro {
+    padding: 10px 20px;
+    font-size: 13px;
+    width: 100%;
+  }
+  
+  .glass-pro {
+    border-radius: 10px;
+    padding: 0.75rem;
+  }
+  
+  /* Better mobile spacing */
+  section {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 375px) {
+  html {
+    font-size: 12px;
+  }
+  
+  .btn-pro {
+    padding: 10px 16px;
+    font-size: 12px;
+  }
+  
+  .status-badge {
+    padding: 5px 12px;
+    font-size: 11px;
+  }
 }
 
 /* Improved Mobile Touch Targets */
 @media (hover: none) and (pointer: coarse) {
-  button, a {
+  button, a, input, select, textarea {
     min-height: 44px;
+  }
+  
+  button:not(.no-min-width), a.btn-pro {
     min-width: 44px;
+  }
+}
+
+/* Tablet Landscape Optimization */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Better Focus States for Accessibility */
+button:focus-visible, 
+a:focus-visible, 
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid rgba(99, 102, 241, 0.8);
+  outline-offset: 2px;
+}
+
+/* Prevent horizontal scroll */
+body, html {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Responsive container */
+.container-responsive {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 640px) {
+  .container-responsive {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-responsive {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-responsive {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-responsive {
+    max-width: 1280px;
+  }
+}
+
+/* Mobile-friendly animations - reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
