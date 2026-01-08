@@ -80,7 +80,7 @@
    ✓ Professional title display
    ✓ Download CV button
    ✓ Social media links (WhatsApp, GitHub, LinkedIn)
-   ✓ Hire Me call-to-action button
+   ✓ Contact Me call-to-action button
 
 2. 👤 ABOUT SECTION
    Features:

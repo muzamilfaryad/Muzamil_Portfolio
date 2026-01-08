@@ -18,7 +18,7 @@ export const translations = {
       name: 'Muhammad Muzamil Faryad',
       title: 'MERN Stack Developer',
       description: 'With 6 months of experience crafting robust and scalable web applications. Specialized in MongoDB, Express.js, React.js (Next.js), and Node.js.',
-      hireMe: 'Hire Me',
+      contactMe: 'Contact Me',
       downloadCV: 'Download CV'
     },
     // About Section
@@ -117,7 +117,7 @@ export const translations = {
       name: 'محمد مزمل فرياد',
       title: 'مطور MERN Stack',
       description: 'مع 10 سنوات من الخبرة في بناء تطبيقات ويب قوية وقابلة للتطوير. متخصص في MongoDB و Express.js و React.js (Next.js) و Node.js.',
-      hireMe: 'وظفني',
+      contactMe: 'اتصل بي',
       downloadCV: 'تحميل السيرة الذاتية'
     },
     // About Section
@@ -216,7 +216,7 @@ export const translations = {
       name: 'محمد مزمل فریاد',
       title: 'MERN Stack ڈویلپر',
       description: '10 سال کے تجربے کے ساتھ مضبوط اور قابل توسیع ویب ایپلیکیشنز بنانے میں مہارت۔ MongoDB، Express.js، React.js (Next.js)، اور Node.js میں ماہر۔',
-      hireMe: 'مجھے ملازمت دیں',
+      contactMe: 'مجھ سے رابطہ کریں',
       downloadCV: 'سی وی ڈاؤن لوڈ کریں'
     },
     // About Section

@@ -1,88 +1,119 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { FaGithub, FaExternalLinkAlt, FaSearch, FaFilter } from 'react-icons/fa';
+import { FaGithub, FaTimes, FaStar, FaCode, FaRocket } from 'react-icons/fa';
 
 export default function Projects() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedTech, setSelectedTech] = useState('All');
-  const [selectedYear, setSelectedYear] = useState('All');
-  const [selectedIndustry, setSelectedIndustry] = useState('All');
+  const [selectedProject, setSelectedProject] = useState(null);
 
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-featured e-commerce platform with real-time inventory management, payment gateway integration (Stripe), shopping cart, user authentication, and admin dashboard. Built with Next.js for optimal performance.',
-      image: '/projects/ecommerce.jpg',
-      tags: ['Next.js', 'MongoDB', 'Stripe', 'Node.js', 'Tailwind CSS'],
-      github: 'https://github.com/muzamilfaryad',
+      title: 'DevConnect - Developer Job Matching Platform',
+      description: 'A modern full-stack MERN application that connects developers with companies using an intelligent job matching system. Features smart matching algorithms, dual interfaces for developers and recruiters, real-time updates, and secure authentication.',
+      image: '/projects/devconnect.jpg',
+      tags: ['Node.js', 'MongoDB', 'React', 'Express.js', 'JWT', 'Tailwind CSS'],
+      github: 'https://github.com/muzamilfaryad/-DevConnect---Developer-Job-Matching-Platform.git',
       demo: '#',
-      features: ['Real-time inventory', 'Payment processing', 'Admin dashboard', 'Order tracking'],
+      features: ['Smart Matching Algorithm', 'Dual Interfaces', 'Real-time Updates', 'Secure Authentication', 'Responsive Design'],
       year: '2024',
-      industry: 'E-Commerce'
+      industry: 'Job Matching',
+      detailedDescription: `DevConnect is a comprehensive job matching platform built with the MERN stack that intelligently connects software developers with recruiters. The platform features a sophisticated matching algorithm that analyzes developer skills, experience levels, and job requirements to suggest the best opportunities.
+
+Key Features:
+• Smart Matching: Algorithm-based job recommendations
+• Dual Interfaces: Separate optimized experiences for developers and recruiters
+• Real-time Updates: Live application status tracking
+• Secure & Scalable: Production-ready with enterprise-level security
+• Modern UI/UX: Clean, responsive design built with Tailwind CSS
+
+Tech Stack:
+• Backend: Node.js, Express.js, MongoDB, JWT, Bcrypt
+• Frontend: React 18, React Router, Axios, Tailwind CSS
+• Security: Helmet, CORS, Rate Limiting, Input Sanitization
+• Performance: Compression, Caching, Optimized Queries`
     },
     {
-      title: 'Social Media Analytics Dashboard',
-      description: 'Advanced analytics platform for social media management with real-time data visualization, engagement metrics, automated reporting, and multi-platform integration (Twitter, Facebook, Instagram).',
-      image: '/projects/analytics.jpg',
-      tags: ['React', 'Express.js', 'MongoDB', 'Chart.js', 'Redis'],
-      github: 'https://github.com/muzamilfaryad',
+      title: 'E-commerce Product Dashboard',
+      description: 'A modern, feature-rich e-commerce dashboard built with React, showcasing advanced frontend development techniques including state management, performance optimization, and responsive design.',
+      image: '/projects/ecommerce-dashboard.jpg',
+      tags: ['React', 'JavaScript', 'CSS3', 'Context API', 'Custom Hooks'],
+      github: 'https://github.com/muzamilfaryad/Ecommerce_Dashboard.git',
       demo: '#',
-      features: ['Real-time analytics', 'Data visualization', 'Multi-platform', 'Automated reports'],
+      features: ['Advanced Filtering', 'Shopping Cart', 'Wishlist', 'Product Comparison', 'Dark Mode'],
       year: '2024',
-      industry: 'Social Media'
+      industry: 'E-Commerce',
+      detailedDescription: `This E-commerce Product Dashboard is a comprehensive React application that demonstrates modern frontend development practices. Built entirely with React hooks and functional components, it provides a complete shopping experience with cart management, wishlist functionality, product comparison, and advanced filtering capabilities.
+
+Key Highlights:
+• 100% Functional Components - Modern React with hooks
+• No External UI Libraries - Custom components and styling
+• Fully Responsive - Mobile-first design approach
+• Type-Safe - Well-documented with JSDoc comments
+• Performance Optimized - Memoization and lazy loading
+• Persistent State - localStorage integration
+• Dark Mode Support - Toggle between light and dark themes
+
+Features:
+• Product Management: 30 Products across 5 categories
+• Advanced Filtering: Real-time search, category, price, rating filters
+• Shopping Cart: Add/remove, quantity control, automatic calculations
+• Wishlist: Save favorites with persistent storage
+• Product Comparison: Compare up to 3 products side-by-side
+• Modern UI: Loading skeletons, toast notifications, smooth animations
+
+Tech Stack:
+• React 18.2.0 with Hooks and Context API
+• CSS Modules for scoped styling
+• Custom hooks for reusable logic
+• localStorage for data persistence
+• Mobile-first responsive design`
     },
     {
-      title: 'Healthcare Management System',
-      description: 'Comprehensive hospital management system with patient records, appointment scheduling, prescription management, billing system, and telemedicine capabilities. HIPAA compliant with robust security.',
-      image: '/projects/healthcare.jpg',
-      tags: ['Next.js', 'PostgreSQL', 'Node.js', 'Socket.io', 'AWS'],
-      github: 'https://github.com/muzamilfaryad',
+      title: 'Diet Planner Application',
+      description: 'A professional, cross-platform mobile and web application built with Flutter that empowers users to manage their nutritional goals, track calorie intake, create personalized meal plans, and discover recipes.',
+      image: '/projects/diet-planner.jpg',
+      tags: ['Flutter', 'Firebase', 'Dart', 'OpenFoodFacts API', 'TheMealDB API'],
+      github: 'https://github.com/muzamilfaryad/Diet_Planner_Application.git',
       demo: '#',
-      features: ['Patient records', 'Telemedicine', 'Appointment system', 'HIPAA compliant'],
-      year: '2023',
-      industry: 'Healthcare'
-    },
-    {
-      title: 'Real Estate Marketplace',
-      description: 'Property listing platform with advanced search filters, virtual tours, mortgage calculator, agent dashboard, and real-time chat. Includes map integration and property comparison features.',
-      image: '/projects/realestate.jpg',
-      tags: ['Next.js', 'MongoDB', 'Google Maps API', 'WebRTC', 'Node.js'],
-      github: 'https://github.com/muzamilfaryad',
-      demo: '#',
-      features: ['Virtual tours', 'Advanced search', 'Real-time chat', 'Mortgage calculator'],
-      year: '2023',
-      industry: 'Real Estate'
-    },
-    {
-      title: 'Project Management Tool',
-      description: 'Collaborative project management platform with Kanban boards, Gantt charts, time tracking, team collaboration, file sharing, and automated notifications. Integrates with popular tools like Slack and GitHub.',
-      image: '/projects/projectmgmt.jpg',
-      tags: ['React', 'Express.js', 'MongoDB', 'Socket.io', 'Redux'],
-      github: 'https://github.com/muzamilfaryad',
-      demo: '#',
-      features: ['Kanban boards', 'Time tracking', 'Team collaboration', 'Integrations'],
+      features: ['Nutrition Tracking', 'Barcode Scanning', 'Meal Planning', 'Recipe Discovery', 'AI Features'],
       year: '2024',
-      industry: 'Productivity'
+      industry: 'Health & Fitness',
+      detailedDescription: `The Diet Planner Application is a production-ready Flutter app designed to help users achieve their health and nutrition goals through intelligent meal planning, comprehensive food tracking, and data-driven insights.
+
+What Makes It Special:
+• Zero Configuration Required - Works out of the box with public APIs
+• Cloud Sync - Firebase integration for cross-device data synchronization
+• Multi-Platform - iOS, Android, and Web support
+• AI-Powered - Optional AI features for smart recommendations
+• 2.8M+ Foods - Extensive food database via OpenFoodFacts
+• 300+ Recipes - Curated recipes from TheMealDB
+• Barcode Scanning - Quick food entry with camera scan
+• Modern Design - Beautiful Material Design 3 UI with smooth animations
+
+Core Features:
+• Real-time Calorie & Macro Tracking with animated progress rings
+• 7-Day History with achievement badges
+• Smart Food Search powered by OpenFoodFacts (2.8M+ products)
+• Barcode Scanning (mobile) with manual entry fallback
+• Daily Meal Plans with 4 meal types and notes support
+• Recipe Discovery with 300+ recipes, filtering, and YouTube links
+• Firebase Authentication and Cloud Firestore sync
+• Optional AI features: Nutrition Advisor, Food Parser, Recipe Generator
+
+Tech Stack:
+• Flutter 3.9+ with Dart 3.9.2+
+• Firebase Core, Auth, Firestore
+• Mobile Scanner for barcode scanning
+• HTTP for API communication
+• Cached Network Image for optimization
+• Flutter DotEnv for environment variables
+• Material Design 3 for modern UI`
     },
   ];
 
-  // Extract unique values for filters
-  const allTechs = ['All', ...new Set(projects.flatMap(p => p.tags))];
-  const allYears = ['All', ...new Set(projects.map(p => p.year))];
-  const allIndustries = ['All', ...new Set(projects.map(p => p.industry))];
+  // Extract unique values for filters - Removed
 
-  // Filter projects based on search and filters
-  const filteredProjects = projects.filter(project => {
-    const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         project.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    
-    const matchesTech = selectedTech === 'All' || project.tags.includes(selectedTech);
-    const matchesYear = selectedYear === 'All' || project.year === selectedYear;
-    const matchesIndustry = selectedIndustry === 'All' || project.industry === selectedIndustry;
-    
-    return matchesSearch && matchesTech && matchesYear && matchesIndustry;
-  });
+  // Filter projects based on search and filters - Removed, show all projects
+  const displayedProjects = projects;
 
   return (
     <section id="projects" className="py-20 px-4">
@@ -102,85 +133,18 @@ export default function Projects() {
           </p>
         </motion.div>
 
-        {/* Search and Filters */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-12"
-        >
-          {/* Search Bar */}
-          <div className="relative mb-6">
-            <FaSearch className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-400 text-lg" />
-            <input
-              type="text"
-              placeholder="Search projects, technologies, or keywords..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full glass-pro pl-14 pr-6 py-5 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all text-base"
-              style={{ fontFamily: 'Inter, sans-serif' }}
-            />
-          </div>
-
-          {/* Filter Buttons */}
-          <div className="flex flex-wrap gap-4 items-center">
-            <div className="flex items-center gap-2 text-gray-300" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 600 }}>
-              <FaFilter />
-              <span>Filter by:</span>
-            </div>
-            
-            {/* Technology Filter */}
-            <select
-              value={selectedTech}
-              onChange={(e) => setSelectedTech(e.target.value)}
-              className="glass-pro px-5 py-3 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-primary/50 cursor-pointer border border-white/10 hover:border-primary/30 transition-all"
-              style={{ fontFamily: 'Inter, sans-serif' }}
-            >
-              {allTechs.map(tech => (
-                <option key={tech} value={tech} className="bg-[#0a0e27]">{tech}</option>
-              ))}
-            </select>
-
-            {/* Industry Filter */}
-            <select
-              value={selectedIndustry}
-              onChange={(e) => setSelectedIndustry(e.target.value)}
-              className="glass-pro px-5 py-3 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-primary/50 cursor-pointer border border-white/10 hover:border-primary/30 transition-all"
-              style={{ fontFamily: 'Inter, sans-serif' }}
-            >
-              {allIndustries.map(industry => (
-                <option key={industry} value={industry} className="bg-[#0a0e27]">{industry}</option>
-              ))}
-            </select>
-
-            {/* Year Filter */}
-            <select
-              value={selectedYear}
-              onChange={(e) => setSelectedYear(e.target.value)}
-              className="glass-pro px-5 py-3 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-primary/50 cursor-pointer border border-white/10 hover:border-primary/30 transition-all"
-              style={{ fontFamily: 'Inter, sans-serif' }}
-            >
-              {allYears.map(year => (
-                <option key={year} value={year} className="bg-[#0a0e27]">{year}</option>
-              ))}
-            </select>
-
-            {/* Results count */}
-            <span className="ml-auto text-gray-300" style={{ fontFamily: 'Inter, sans-serif', fontWeight: 500 }}>
-              Showing <span className="gradient-text-pro font-bold">{filteredProjects.length}</span> of {projects.length} projects
-            </span>
-          </div>
-        </motion.div>
+        {/* Search and Filters - Removed */}
 
         <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {filteredProjects.map((project, index) => (
+          {displayedProjects.map((project, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="pro-card group relative"
+              className="pro-card group relative cursor-pointer"
+              onClick={() => setSelectedProject(project)}
             >
               {/* Project Image */}
               <div className="relative h-52 bg-gradient-to-br from-primary/20 to-secondary/20 overflow-hidden">
@@ -188,15 +152,15 @@ export default function Projects() {
                   {index + 1}
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a0e27] to-transparent" />
-                <div className="absolute top-4 right-4">
-                  <span className="status-badge text-xs px-4 py-2">
-                    {project.year}
-                  </span>
-                </div>
               </div>
 
               {/* Project Content */}
               <div className="p-6 relative">
+                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center">
+                    <FaStar className="text-primary text-sm" />
+                  </div>
+                </div>
                 <h3 className="text-xl font-bold mb-3 group-hover:gradient-text-pro transition-all duration-300" style={{ fontFamily: 'Poppins, sans-serif' }}>
                   {project.title}
                 </h3>
@@ -243,15 +207,16 @@ export default function Projects() {
                     <FaGithub size={18} className="group-hover/btn:scale-110 transition-transform" />
                     <span className="font-semibold">Code</span>
                   </a>
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setSelectedProject(project);
+                    }}
                     className="flex-1 btn-pro btn-pro-primary py-3 rounded-xl flex items-center justify-center gap-2 group/btn text-sm"
                   >
-                    <FaExternalLinkAlt size={16} className="group-hover/btn:translate-x-1 transition-transform" />
-                    <span className="text-sm font-semibold">Demo</span>
-                  </a>
+                    <FaStar size={16} className="group-hover/btn:scale-110 transition-transform" />
+                    <span className="font-semibold">Read about project</span>
+                  </button>
                 </div>
               </div>
             </motion.div>
@@ -276,6 +241,112 @@ export default function Projects() {
           </a>
         </motion.div>
       </div>
+
+      {/* Project Detail Modal */}
+      {selectedProject && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+          onClick={() => setSelectedProject(null)}
+        >
+          <motion.div
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.9, opacity: 0 }}
+            className="bg-[#0a0e27] rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-white/10"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Header */}
+            <div className="relative p-6 border-b border-white/10">
+              <button
+                onClick={() => setSelectedProject(null)}
+                className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors"
+              >
+                <FaTimes size={24} />
+              </button>
+              <div className="flex items-start gap-6">
+                <div className="w-24 h-24 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl flex items-center justify-center text-3xl font-bold text-white/20">
+                  <FaCode />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold mb-2 gradient-text-pro" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                    {selectedProject.title}
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed" style={{ fontFamily: 'Inter, sans-serif' }}>
+                    {selectedProject.description}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Modal Content */}
+            <div className="p-6 space-y-6">
+              {/* Features */}
+              <div>
+                <h4 className="text-lg font-semibold mb-4 flex items-center gap-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                  <FaRocket className="text-primary" />
+                  Key Features
+                </h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  {selectedProject.features.map((feature, idx) => (
+                    <div key={idx} className="flex items-center gap-3 text-gray-300">
+                      <div className="w-2 h-2 bg-primary rounded-full"></div>
+                      <span style={{ fontFamily: 'Inter, sans-serif' }}>{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Tech Stack */}
+              <div>
+                <h4 className="text-lg font-semibold mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                  Technology Stack
+                </h4>
+                <div className="flex flex-wrap gap-2">
+                  {selectedProject.tags.map((tag, idx) => (
+                    <span
+                      key={idx}
+                      className="px-3 py-2 bg-gradient-to-r from-primary/10 to-secondary/10 text-primary rounded-lg border border-primary/30 text-sm font-medium"
+                      style={{ fontFamily: 'Inter, sans-serif' }}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Detailed Description */}
+              {selectedProject.detailedDescription && (
+                <div>
+                  <h4 className="text-lg font-semibold mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                    Project Details
+                  </h4>
+                  <div className="prose prose-invert max-w-none">
+                    <pre className="whitespace-pre-wrap text-gray-300 leading-relaxed text-sm" style={{ fontFamily: 'Inter, sans-serif' }}>
+                      {selectedProject.detailedDescription}
+                    </pre>
+                  </div>
+                </div>
+              )}
+
+              {/* Links */}
+              <div className="flex gap-4 pt-4 border-t border-white/10">
+                <a
+                  href={selectedProject.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 btn-pro btn-pro-secondary py-3 rounded-xl flex items-center justify-center gap-2 group/btn"
+                >
+                  <FaGithub size={18} className="group-hover/btn:scale-110 transition-transform" />
+                  <span className="font-semibold">View Source Code</span>
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
     </section>
   );
 }
