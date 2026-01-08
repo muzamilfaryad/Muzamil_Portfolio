@@ -130,13 +130,13 @@ export default function SkillsVisualization() {
             transition={{ delay: 0.2 }}
             className="glass rounded-2xl p-6 text-center"
           >
-            <div className="text-5xl font-bold gradient-text mb-2">10+</div>
-            <div className="text-gray-400">Years Experience</div>
+            <div className="text-5xl font-bold gradient-text mb-2">6</div>
+            <div className="text-gray-400">Months Experience</div>
           </motion.div>
         </div>
 
         {/* Skills Grid with Interactive Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredSkills.map((skill, index) => (
             <motion.div
               key={skill.name}

@@ -2,7 +2,7 @@
 📧 EMAIL SETUP INSTRUCTIONS
 ═══════════════════════════════════════════════════════════════════════════
 
-Your contact form is configured to send emails to: muzamilfaryad77@gmail.com
+Your contact form is configured to send emails to: muzamilfaryad77@gmail.com (or RECIPIENT_EMAIL if set)
 
 To enable the contact form, you need to generate a Gmail App Password:
 
@@ -36,6 +36,9 @@ STEP-BY-STEP GUIDE:
    With:
    EMAIL_PASSWORD=xxxx xxxx xxxx xxxx
    (paste the 16-character password you just generated)
+   
+   Optional: Set recipient email (defaults to muzamilfaryad77@gmail.com):
+   RECIPIENT_EMAIL=your-email@example.com
 
 5. Restart the development server:
    - Stop the server (Ctrl+C in terminal)

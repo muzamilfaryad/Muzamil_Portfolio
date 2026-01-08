@@ -26,10 +26,15 @@ export default function Contact() {
         body: JSON.stringify(formData),
       });
 
-      if (response.ok) {
+      const data = await response.json();
+
+      if (response.ok && data.emailSent) {
         setStatus('success');
         setFormData({ name: '', email: '', subject: '', message: '' });
         setTimeout(() => setStatus(''), 3000);
+      } else if (response.ok && !data.emailSent) {
+        setStatus('warning');
+        setTimeout(() => setStatus(''), 5000);
       } else {
         setStatus('error');
       }
@@ -226,6 +231,9 @@ export default function Contact() {
 
               {status === 'success' && (
                 <p className="text-green-400 text-center font-medium" style={{ fontFamily: 'Inter, sans-serif' }}>✓ Message sent successfully!</p>
+              )}
+              {status === 'warning' && (
+                <p className="text-yellow-400 text-center font-medium" style={{ fontFamily: 'Inter, sans-serif' }}>⚠ Message received! Email will be sent once configured.</p>
               )}
               {status === 'error' && (
                 <p className="text-red-400 text-center font-medium" style={{ fontFamily: 'Inter, sans-serif' }}>✗ Failed to send message. Please try again.</p>

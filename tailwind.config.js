@@ -16,6 +16,7 @@ module.exports = {
       animation: {
         'float': 'float 3s ease-in-out infinite',
         'glow': 'glow 2s ease-in-out infinite alternate',
+        'pulse-glow': 'pulse-glow 2s ease-in-out infinite alternate',
       },
       keyframes: {
         float: {
@@ -26,6 +27,14 @@ module.exports = {
           '0%': { boxShadow: '0 0 5px #0ea5e9, 0 0 10px #0ea5e9' },
           '100%': { boxShadow: '0 0 10px #0ea5e9, 0 0 20px #0ea5e9, 0 0 30px #0ea5e9' },
         },
+        'pulse-glow': {
+          '0%, 100%': { boxShadow: '0 0 0 0 rgba(14, 165, 233, 0.7)' },
+          '50%': { boxShadow: '0 0 0 10px rgba(14, 165, 233, 0)' },
+        },
+      },
+      screens: {
+        'xs': '475px',
+        '3xl': '1600px',
       },
     },
   },

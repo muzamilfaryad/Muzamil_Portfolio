@@ -3,7 +3,7 @@ import { FaCode, FaRocket, FaLightbulb, FaUsers } from 'react-icons/fa';
 
 export default function About() {
   const stats = [
-    { icon: <FaCode size={30} />, number: '10+', label: 'Years Experience' },
+    { icon: <FaCode size={30} />, number: '6', label: 'Months Experience' },
     { icon: <FaRocket size={30} />, number: '150+', label: 'Projects Completed' },
     { icon: <FaUsers size={30} />, number: '80+', label: 'Happy Clients' },
     { icon: <FaLightbulb size={30} />, number: '50+', label: 'Awards Won' },
@@ -37,7 +37,7 @@ export default function About() {
           >
             <h3 className="text-2xl font-bold mb-6 gradient-text-pro" style={{ fontFamily: 'Poppins, sans-serif' }}>My Journey</h3>
             <p className="text-gray-300 leading-relaxed mb-4" style={{ fontFamily: 'Inter, sans-serif' }}>
-              With a decade of experience in full-stack development, I've mastered the art of 
+              With 6 months of experience in full-stack development, I've mastered the art of 
               building scalable, high-performance web applications using the MERN stack. My expertise 
               spans from architecting complex backend systems to crafting beautiful, responsive user interfaces.
             </p>

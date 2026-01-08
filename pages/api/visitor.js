@@ -6,6 +6,15 @@ export default async function handler(req, res) {
   }
 
   try {
+    // Check if MongoDB is configured
+    if (!process.env.MONGODB_URI) {
+      return res.status(200).json({
+        success: true,
+        count: 0,
+        message: 'Visitor tracking disabled (MongoDB not configured)'
+      });
+    }
+
     const client = await clientPromise;
     const db = client.db('portfolio');
     const visitorsCollection = db.collection('visitors');

@@ -608,3 +608,37 @@ h1, h2, h3, h4, h5, h6 {
     min-width: 44px;
   }
 }
+
+/* Performance optimizations */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Reduce animations on mobile for better performance */
+@media (max-width: 768px) {
+  .animated-bg {
+    animation: none;
+  }
+  
+  /* Reduce motion for heavy animations */
+  .motion-safe * {
+    animation-duration: 0.3s !important;
+  }
+}
+
+/* Optimize scrolling on mobile */
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Better text rendering */
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

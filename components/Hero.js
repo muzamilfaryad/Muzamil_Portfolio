@@ -109,8 +109,8 @@ export default function Hero() {
           {'{}'}
         </motion.div>
 
-        {/* Floating Particles */}
-        {[...Array(15)].map((_, i) => (
+        {/* Floating Particles - Reduced on mobile for performance */}
+        {[...Array(typeof window !== 'undefined' && window.innerWidth < 768 ? 5 : 15)].map((_, i) => (
           <motion.div
             key={`particle-${i}`}
             initial={{
@@ -134,8 +134,8 @@ export default function Hero() {
           />
         ))}
 
-        {/* Animated Lines */}
-        {[...Array(8)].map((_, i) => (
+        {/* Animated Lines - Reduced on mobile */}
+        {[...Array(typeof window !== 'undefined' && window.innerWidth < 768 ? 3 : 8)].map((_, i) => (
           <motion.div
             key={`line-${i}`}
             initial={{
@@ -205,7 +205,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
+              className="text-4xl xs:text-5xl md:text-7xl font-bold mb-6 leading-tight"
               style={{ fontFamily: 'Poppins, sans-serif' }}
             >
               {t('hero.name').split(' ').slice(0, 2).join(' ')}
@@ -217,7 +217,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-2xl md:text-3xl mb-6"
+              className="text-xl xs:text-2xl md:text-3xl mb-6"
               style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600 }}
             >
               <span className="gradient-text-pro">

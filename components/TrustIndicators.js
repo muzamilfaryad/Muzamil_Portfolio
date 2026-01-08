@@ -31,11 +31,11 @@ export default function TrustIndicators() {
   const indicators = [
     {
       icon: FaBriefcase,
-      value: 10,
-      suffix: '+',
-      label: 'Years Experience',
+      value: 6,
+      suffix: '',
+      label: 'Months Experience',
       color: 'from-blue-500 to-cyan-500',
-      description: 'Decade of excellence in MERN stack'
+      description: '6 months of excellence in MERN stack'
     },
     {
       icon: FaProjectDiagram,

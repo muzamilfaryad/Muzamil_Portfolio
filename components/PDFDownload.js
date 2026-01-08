@@ -57,7 +57,7 @@ export default function PDFDownload() {
         <body>
           <div class="header">
             <h1>Muhammad Muzamil Faryad</h1>
-            <p class="subtitle">MERN Stack Developer | 10+ Years Experience</p>
+            <p class="subtitle">MERN Stack Developer | 6 Months Experience</p>
             <div class="contact-info">
               <span>📧 muzamilfaryad@example.com</span>
               <span>📱 +92 XXX XXXXXXX</span>
@@ -68,15 +68,15 @@ export default function PDFDownload() {
 
           <div class="section">
             <h2>Professional Summary</h2>
-            <p>Highly skilled MERN Stack Developer with over 10 years of experience in designing, developing, and maintaining modern web applications. Proven expertise in MongoDB, Express.js, React.js (Next.js), and Node.js. Strong track record of delivering scalable, performant, and user-friendly solutions that drive business growth.</p>
+            <p>Highly skilled MERN Stack Developer with 6 months of experience in designing, developing, and maintaining modern web applications. Proven expertise in MongoDB, Express.js, React.js (Next.js), and Node.js. Strong track record of delivering scalable, performant, and user-friendly solutions that drive business growth.</p>
           </div>
 
           <div class="section">
             <h2>Key Statistics</h2>
             <div class="stats-grid">
               <div class="stat-item">
-                <div class="stat-number">10+</div>
-                <div class="stat-label">Years Experience</div>
+                <div class="stat-number">6</div>
+                <div class="stat-label">Months Experience</div>
               </div>
               <div class="stat-item">
                 <div class="stat-number">150+</div>

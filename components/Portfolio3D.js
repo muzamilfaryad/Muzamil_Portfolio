@@ -100,7 +100,7 @@ export default function Portfolio3D() {
         </motion.div>
 
         {/* 3D Cards Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 xs:grid-cols-2 gap-8 mb-16">
           {portfolioCards.map((card, index) => (
             <motion.div
               key={index}

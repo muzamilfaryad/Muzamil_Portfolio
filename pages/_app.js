@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }) {
         {/* Primary Meta Tags */}
         <title>Muhammad Muzamil Faryad - MERN Stack Developer | Full Stack Web Developer</title>
         <meta name="title" content="Muhammad Muzamil Faryad - MERN Stack Developer | Full Stack Web Developer" />
-        <meta name="description" content="Expert MERN Stack Developer with 10+ years experience. Specializing in MongoDB, Express.js, React, Next.js, Node.js. 150+ projects delivered. Available for hire." />
+        <meta name="description" content="Expert MERN Stack Developer with 6 months experience. Specializing in MongoDB, Express.js, React, Next.js, Node.js. 150+ projects delivered. Available for hire." />
         <meta name="keywords" content="MERN Stack Developer, Full Stack Developer, React Developer, Next.js Developer, Node.js Developer, MongoDB Expert, JavaScript Developer, Web Developer, Muzamil Faryad, Pakistan Developer, Freelance Developer" />
         <meta name="author" content="Muhammad Muzamil Faryad" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -24,7 +24,7 @@ export default function App({ Component, pageProps }) {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://your-domain.com" />
         <meta property="og:title" content="Muhammad Muzamil Faryad - MERN Stack Developer" />
-        <meta property="og:description" content="Expert MERN Stack Developer with 10+ years experience. Specializing in MongoDB, Express.js, React, Next.js, Node.js. 150+ projects delivered." />
+        <meta property="og:description" content="Expert MERN Stack Developer with 6 months experience. Specializing in MongoDB, Express.js, React, Next.js, Node.js. 150+ projects delivered." />
         <meta property="og:image" content="https://your-domain.com/opentowork.png" />
         <meta property="og:site_name" content="Muhammad Muzamil Faryad Portfolio" />
         
@@ -32,7 +32,7 @@ export default function App({ Component, pageProps }) {
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://your-domain.com" />
         <meta property="twitter:title" content="Muhammad Muzamil Faryad - MERN Stack Developer" />
-        <meta property="twitter:description" content="Expert MERN Stack Developer with 10+ years experience. Specializing in MongoDB, Express.js, React, Next.js, Node.js." />
+        <meta property="twitter:description" content="Expert MERN Stack Developer with 6 months experience. Specializing in MongoDB, Express.js, React, Next.js, Node.js." />
         <meta property="twitter:image" content="https://your-domain.com/opentowork.png" />
         
         {/* Additional SEO */}

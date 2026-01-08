@@ -1,17 +1,32 @@
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Skills from '../components/Skills';
-import SkillsVisualization from '../components/SkillsVisualization';
-import Projects from '../components/Projects';
-import TrustIndicators from '../components/TrustIndicators';
-import LiveMetrics from '../components/LiveMetrics';
-import CodePlayground from '../components/CodePlayground';
-import Portfolio3D from '../components/Portfolio3D';
-import Contact from '../components/Contact';
-import Footer from '../components/Footer';
-import PDFDownload from '../components/PDFDownload';
+
+// Dynamically import heavy components with loading
+const SkillsVisualization = dynamic(() => import('../components/SkillsVisualization'), {
+  loading: () => <div className="py-20 text-center">Loading skills...</div>
+});
+const Projects = dynamic(() => import('../components/Projects'), {
+  loading: () => <div className="py-20 text-center">Loading projects...</div>
+});
+const Portfolio3D = dynamic(() => import('../components/Portfolio3D'), {
+  loading: () => <div className="py-20 text-center">Loading 3D showcase...</div>
+});
+const CodePlayground = dynamic(() => import('../components/CodePlayground'), {
+  loading: () => <div className="py-20 text-center">Loading code playground...</div>
+});
+const Contact = dynamic(() => import('../components/Contact'), {
+  loading: () => <div className="py-20 text-center">Loading contact...</div>
+});
+const Footer = dynamic(() => import('../components/Footer'), {
+  loading: () => <div className="py-20 text-center">Loading footer...</div>
+});
+const PDFDownload = dynamic(() => import('../components/PDFDownload'), {
+  loading: () => <div className="py-20 text-center">Loading download...</div>
+});
 
 export default function Home() {
   const structuredData = {
@@ -30,7 +45,7 @@ export default function Home() {
       "@type": "Organization",
       "name": "Freelance"
     },
-    "description": "Expert MERN Stack Developer with 10+ years of experience specializing in MongoDB, Express.js, React, Next.js, and Node.js",
+    "description": "Expert MERN Stack Developer with 6 months of experience specializing in MongoDB, Express.js, React, Next.js, and Node.js",
     "knowsAbout": [
       "MongoDB",
       "Express.js",
@@ -62,11 +77,9 @@ export default function Home() {
         <Navbar />
         <main>
           <Hero />
-          <TrustIndicators />
           <About />
           <Skills />
           <SkillsVisualization />
-          <LiveMetrics />
           <Projects />
           <Portfolio3D />
           <CodePlayground />
