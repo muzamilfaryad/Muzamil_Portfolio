@@ -1,0 +1,21 @@
+{
+  "name": "Muhammad Muzamil Faryad Portfolio",
+  "short_name": "Muzamil Portfolio",
+  "description": "Portfolio of Muhammad Muzamil Faryad, MERN Stack Developer",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0ea5e9",
+  "theme_color": "#0ea5e9",
+  "icons": [
+    {
+      "src": "/opentowork.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/opentowork.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,9 +1,36 @@
 import Head from 'next/head';
+import { useEffect } from 'react';
 import '../styles/globals.css';
 import { ThemeProvider } from '../contexts/ThemeContext';
 import { LanguageProvider } from '../contexts/LanguageContext';
 
 export default function App({ Component, pageProps }) {
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('SW registered: ', registration);
+          // Request notification permission
+          if ('Notification' in window && Notification.permission === 'default') {
+            Notification.requestPermission().then((permission) => {
+              if (permission === 'granted') {
+                console.log('Notification permission granted.');
+                // Send a welcome notification
+                registration.showNotification('Welcome to Muzamil\'s Portfolio!', {
+                  body: 'Thanks for visiting! Feel free to explore.',
+                  icon: '/opentowork.png',
+                  badge: '/opentowork.png',
+                });
+              }
+            });
+          }
+        })
+        .catch((registrationError) => {
+          console.log('SW registration failed: ', registrationError);
+        });
+    }
+  }, []);
+
   return (
     <ThemeProvider>
       <LanguageProvider>
@@ -39,6 +66,7 @@ export default function App({ Component, pageProps }) {
         <meta name="theme-color" content="#0ea5e9" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/opentowork.png" />
+        <link rel="manifest" href="/manifest.json" />
       </Head>
         <Component {...pageProps} />
       </LanguageProvider>
