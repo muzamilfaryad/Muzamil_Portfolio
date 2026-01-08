@@ -51,15 +51,24 @@ export default function Navbar() {
       try {
         const response = await fetch('/api/visitor');
         const data = await response.json();
-        if (data.success) {
+        if (data.success && data.count) {
           setVisitorCount(data.count);
+        } else {
+          // Fallback to a default count
+          setVisitorCount(1250);
         }
       } catch (error) {
         console.error('Error fetching visitor count:', error);
+        // Fallback to a default count on error
+        setVisitorCount(1250);
       }
     };
     
     fetchVisitorCount();
+    
+    // Optional: Update count periodically (every 30 seconds)
+    const interval = setInterval(fetchVisitorCount, 30000);
+    return () => clearInterval(interval);
   }, []);
 
   const menuItems = [
@@ -72,26 +81,28 @@ export default function Navbar() {
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'glass-pro shadow-2xl shadow-primary/10 border-b border-white/10' : 'bg-transparent'}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 sm:h-18 md:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
             <a href="#home" className="flex items-center gap-3 hover:scale-105 transition-transform group">
-              <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-primary/50 group-hover:border-primary transition-colors">
+              <div className="relative w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full overflow-hidden border-2 border-primary/50 group-hover:border-primary transition-colors bg-gradient-to-br from-primary/20 to-secondary/20">
                 <Image
                   src="/logo.png"
                   alt="MMF Logo"
                   fill
+                  sizes="48px"
                   style={{ objectFit: 'cover' }}
                   priority
+                  unoptimized
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-secondary/20"></div>
               </div>
               <div className="flex flex-col">
-                <span className="text-xl font-bold gradient-text-pro" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                <span className="text-lg sm:text-xl font-bold gradient-text-pro" style={{ fontFamily: 'Poppins, sans-serif' }}>
                   MMF
                 </span>
-                <span className="text-xs text-gray-400" style={{ fontFamily: 'Inter, sans-serif' }}>
+                <span className="text-[10px] sm:text-xs text-gray-400" style={{ fontFamily: 'Inter, sans-serif' }}>
                   Portfolio
                 </span>
               </div>

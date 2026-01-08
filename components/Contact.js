@@ -71,7 +71,7 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-20 px-4">
+    <section id="contact" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -80,15 +80,15 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 section-header mx-auto" style={{ fontFamily: 'Poppins, sans-serif' }}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 section-header mx-auto" style={{ fontFamily: 'Poppins, sans-serif' }}>
             Get In <span className="gradient-text-pro">Touch</span>
           </h2>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto" style={{ fontFamily: 'Inter, sans-serif' }}>
+          <p className="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto" style={{ fontFamily: 'Inter, sans-serif' }}>
             Let's discuss your next project and bring your ideas to life
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-10 lg:gap-12">
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -96,7 +96,7 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-2xl font-bold mb-6 gradient-text-pro" style={{ fontFamily: 'Poppins, sans-serif' }}>Contact Information</h3>
+            <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 gradient-text-pro" style={{ fontFamily: 'Poppins, sans-serif' }}>Contact Information</h3>
             <p className="text-gray-300 mb-8" style={{ fontFamily: 'Inter, sans-serif' }}>
               Feel free to reach out through any of these channels. I'm always open to discussing 
               new projects, creative ideas, or opportunities to be part of your vision.
@@ -113,7 +113,7 @@ export default function Contact() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="flex items-center gap-4 glass-pro p-5 rounded-xl hover:border-primary/40 transition-all group"
+                  className="flex items-center gap-3 sm:gap-4 glass-pro p-4 sm:p-5 rounded-lg sm:rounded-xl hover:border-primary/40 transition-all group"
                 >
                   <div className="text-primary group-hover:scale-110 transition-transform">{info.icon}</div>
                   <div>
@@ -154,9 +154,9 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="pro-card p-8"
+            className="pro-card p-5 sm:p-6 md:p-8"
           >
-            <h3 className="text-2xl font-bold mb-6 gradient-text-pro" style={{ fontFamily: 'Poppins, sans-serif' }}>Send a Message (Email)</h3>
+            <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 gradient-text-pro" style={{ fontFamily: 'Poppins, sans-serif' }}>Send a Message (Email)</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label className="block text-sm font-medium mb-2 text-gray-300" style={{ fontFamily: 'Inter, sans-serif' }}>Name</label>
@@ -166,7 +166,7 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full glass-pro border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-primary/50 transition-all"
+                  className="w-full glass-pro border border-white/10 rounded-lg sm:rounded-xl px-4 sm:px-5 py-3 sm:py-4 text-sm sm:text-base text-white focus:outline-none focus:border-primary/50 transition-all"
                   placeholder="Your Name"
                   style={{ fontFamily: 'Inter, sans-serif' }}
                 />
@@ -180,7 +180,7 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full glass-pro border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-primary/50 transition-all"
+                  className="w-full glass-pro border border-white/10 rounded-lg sm:rounded-xl px-4 sm:px-5 py-3 sm:py-4 text-sm sm:text-base text-white focus:outline-none focus:border-primary/50 transition-all"
                   placeholder="your.email@example.com"
                   style={{ fontFamily: 'Inter, sans-serif' }}
                 />
@@ -194,7 +194,7 @@ export default function Contact() {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full glass-pro border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-primary/50 transition-all"
+                  className="w-full glass-pro border border-white/10 rounded-lg sm:rounded-xl px-4 sm:px-5 py-3 sm:py-4 text-sm sm:text-base text-white focus:outline-none focus:border-primary/50 transition-all"
                   style={{ fontFamily: 'Inter, sans-serif' }}
                   placeholder="Project Discussion"
                 />
@@ -208,7 +208,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   rows="5"
-                  className="w-full glass-pro border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-primary/50 transition-all resize-none"
+                  className="w-full glass-pro border border-white/10 rounded-lg sm:rounded-xl px-4 sm:px-5 py-3 sm:py-4 text-sm sm:text-base text-white focus:outline-none focus:border-primary/50 transition-all resize-none"
                   placeholder="Tell me about your project..."
                   style={{ fontFamily: 'Inter, sans-serif' }}
                 />
